@@ -11,7 +11,7 @@ function MakeCommands (builder) {
   return builder
 }
 
-const GuideCommand = {
+const RuleCommand = {
   data: MakeCommands(new SlashCommandBuilder()
     .setName('guide')
     .setDescription('Instruct the user on how to install Erupe.')
@@ -22,4 +22,4 @@ const GuideCommand = {
   }
 }
 
-export default GuideCommand
+export default RuleCommand

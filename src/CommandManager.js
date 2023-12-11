@@ -1,4 +1,4 @@
-import InstallCommand from '../commands/GuideCommand.js'
+import InstallCommand from '../commands/RuleCommand.js'
 import PollCommand from '../commands/PollCommand.js'
 
 export default class CommandManager {
