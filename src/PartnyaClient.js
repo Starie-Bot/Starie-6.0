@@ -11,6 +11,7 @@ export default class PartnyaClient extends Client {
     this.db = new Database()
     this.polls = new PollManager(this)
     this.commands = new CommandManager(this)
+    this.rules = []
   }
 
   async load () {
