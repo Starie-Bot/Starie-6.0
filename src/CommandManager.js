@@ -1,12 +1,12 @@
-import InstallCommand from '../commands/RuleCommand.js'
 import PollCommand from '../commands/PollCommand.js'
+import RuleCommand from '../commands/RuleCommand.js'
 
 export default class CommandManager {
   constructor (client) {
     this.client = client
     this._commands = [
-      InstallCommand,
-      PollCommand
+      PollCommand,
+      RuleCommand
     ]
   }
 

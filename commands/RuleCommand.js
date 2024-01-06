@@ -4,10 +4,16 @@ const RuleCommand = {
   data: new SlashCommandBuilder()
     .setName('rule')
     .setDescription('Display the contents of a specific rule')
-    .setDefaultMemberPermissions(0x2000),
+    .setDefaultMemberPermissions(0x2000)
+    .addIntegerOption(option =>
+      option
+        .setAutocomplete(true)
+        .setName('number')
+        .setDescription('The rule number to quote')
+    ),
   async execute (interaction) {
-    const command = GetGuides().find(command => command.name === interaction.options.getSubcommand())
-    interaction.reply(command.response)
+    const rule = interaction.client.rules.get(command => command.name === interaction.options.getInteger('number'))
+    interaction.reply(rule.rule)
   }
 }
 

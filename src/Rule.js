@@ -1,5 +1,6 @@
 export default class Rule {
-  constructor (data) {
+  constructor (client, data) {
+    this._client = client
     this.id = data.id || new Date().getTime()
     this.rule = data.rule || ''
     this.guild_id = data.guild_id || ''

@@ -1,5 +1,3 @@
-import Rule from './Rule.js'
-
 export default class RuleManager {
   constructor (client, rules) {
     this._client = client
@@ -28,5 +26,9 @@ export default class RuleManager {
 
   get (rule) {
     return this._rules.find(r => r.text === rule || r.id === rule)
+  }
+
+  set (rules) {
+    this._rules = rules
   }
 }
